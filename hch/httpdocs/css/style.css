@@ -73,7 +73,7 @@ height: 121px;border: 1px solid #000;margin: 0 0px 0px 9px;background: url(../im
 #content2 {padding-bottom:0px;float:center;}
 #height { height:400px;}
 #contactheader { height: 150px; width: 949px;border:px solid white;float:center; position:relative;}
-#blankspace { height: 200px; width: 949px;border:px solid white;float:center; position:relative;clear:both;}
+#subscribeLink { height: 200px; width: 949px;border:px solid white;float:center; position:relative;clear:both;}
 .clear {clear:both;}
 .no_pad { padding-bottom:0; font-size:24px;line-height:2.5em;}
 .text {text-align:left;color:#000;display:block;padding-top:0px;margin: 0px 0px 0 0;font:14px sans-serif ;line-height:1.3em;letter-spacing:.05em;}
