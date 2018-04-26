@@ -1,3 +1,0 @@
-http://www.slideshare.net/zomigi/building-responsive-layouts-15508821
-http://www.pietervanos.net/knowledge/jquery-mobile-contact-form/
-http://stackoverflow.com/questions/19377675/php-form-submision-with-jquery-mobile
