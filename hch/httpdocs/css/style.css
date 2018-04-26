@@ -193,7 +193,7 @@ height: 121px;border: 1px solid #000;margin: 0 0px 0px 9px;background: url(../im
 #sitemap li a:hover {color:#fff}
 #bottom {color:#fff;float:bottom;margin-top:0px;text-align:left;width:360px;height:140px;display:inline-block;border:px solid white;position:relative;margin: 0 0 0 0 0px;}
 #bottom li {text-align:center; margin-top: 0px;position:relative;text-transform:uppercase;}
-#icons {width:84px;float:right;margin:5px 150px 0 0;border:px solid white;position:relative;}
+#icons {width:120px;float:right;margin:5px 150px 0 0;border:px solid white;position:relative;}
 #icons li {float:left;padding-right:0px; margin-top:5px;border:px solid white;position:relative;}
 #icons .last {float:bottom;font-size:16px;color:#fff;font-weight:400;line-height:1.2em;margin-top:0px;letter-spacing:0px;padding-bottom:0px;border:px solid white;position:relative;color:#000;}
 
