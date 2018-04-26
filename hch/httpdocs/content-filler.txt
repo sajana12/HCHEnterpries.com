@@ -1,0 +1,79 @@
+<article id="content">
+<div class="wrapper">
+<h2 style="margin:20px 0 0 10px;">Services</h2>
+<div class="col1">
+<figure class="left"><img src="images/page4_img1.jpg" alt=""></figure>
+<p><span class="color1">title goes here</span><br>
+								text goes here change these icons to blue with differet symbols</p>
+
+	
+<figure class="left"><img src="images/page4_img2.jpg" alt=""></figure>
+							<p><span class="color1">Risk Management</span><br>
+									text goes here change these icons to blue with differet symbols </p>
+						
+					</div>
+					<div class="col1">
+						
+							<figure class="left"><img src="images/page4_img3.jpg" alt=""></figure>
+							<p><span class="color1">Clients Relationship</span><br>
+								text goes here change these icons to blue with differet symbols</p>
+						
+						
+							<figure class="left marg_right2"><img src="images/page4_img4.jpg" alt=""></figure>
+							<p><span class="color1">Investments</span><br>
+									 </p>
+						
+					</div>
+					<div class="col1">
+						
+							<figure class="left "><img src="images/page4_img5.jpg" alt=""></figure>
+							<p><span class="color1">Insurance Services</span><br>text goes here change these icons to blue with differet symbols
+								</p>
+						
+						
+							<figure class="left"><img src="images/page4_img6.jpg" alt=""></figure>
+							<p><span class="color1">Sales Lead Generation</span><br>text goes here change these icons to blue with differet symbols
+									 </p>
+						
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="bg1">
+			<div class="main">
+				<article id="content2">
+					<div class="wrapper">
+						<h3>Main Services</h3>
+						<div class="col1">
+							<div class="wrapper">
+								<span class="dropcap_1">A</span>
+								<p class="color2 pad_bot1">Franchise Assessment</p>
+							</div>
+							<p>text goes here</p>
+						</div>
+						<div class="col1">
+							<div class="wrapper">
+								<span class="dropcap_1">B</span>
+								<p class="color2 pad_bot1">Expert Business<br>
+										Plan</p>
+							</div>
+							<p>test</p>
+						</div>
+						<div class="col1">
+							<div class="wrapper">
+								<span class="dropcap_1">C</span>
+								<p class="color2 pad_bot1">International<br>
+										Expansion Advice</p>
+							</div>
+							<p>text</p>
+						</div>
+						<div class="col1">
+							<div class="wrapper">
+								<span class="dropcap_1">D</span>
+								<p class="color2 pad_bot1">Market<br>
+										Research</p>
+							</div>
+							<p>text </p>
+						</div>
+					</div>
+				</article>

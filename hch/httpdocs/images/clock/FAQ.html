@@ -1,0 +1,140 @@
+<html>
+
+<head>
+<title>BillsClock2 FAQ</title>
+</head>
+
+<body>
+<div align="center"><center>
+
+<table border="0" cellpadding="2" width="640">
+  <tr>
+    <td width="100%"><h1>BillsClock2<br>
+    Frequently Asked Questions</h1>
+    <ul>
+      <li><a href="#I'm totally lost, where do I start?">I'm totally lost, where do I start?</a></li>
+      <li><a href="#How can I get my applet to synchronize with a network time server?">How can I
+        get my applet to synchronize with a network time server?</a></li>
+      <li><a href="#Do I need the &quot;Source Code&quot;">Don't I need the &quot;Source
+        Code&quot;?</a></li>
+      <li><a href="#Can I use this on my company's web site?">Can I use this on my company's web
+        site?</a></li>
+      <li><a href="#Can I include this applet in my book or CD?">Can I use this applet in my next
+        book or CD?</a></li>
+      <li><a
+        href="#Can't the applet be transparent so my web page's background image can be seen?">Can't
+        the applet be transparent so my web page's background image can be seen?</a></li>
+      <li><a href="#How do I use .wav files for chimes?">How do I use .wav files for chimes?</a></li>
+      <li><a href="#Some visitors say that they see the wrong time. How come?">Some visitors say
+        they see the wrong time, so what's wrong?</a></li>
+      <li><a
+        href="#When I view the page with the applet all that I see is a blank gray square where the applet should be.">When
+        I view the page with the applet all I see is a gray square.</a></li>
+      <li><a href="#What's a &quot;Java Console&quot;?">What's a &quot;Java Console&quot;?</a></li>
+      <li><a href="#Why does the applet display an error message with Netscape 3.x (or MSIE 3.x)?">Why
+        does the applet display an error message with Netscape 3.x (or MSIE 3.x)?</a></li>
+      <li><a href="#Why didn't you use Java 2?">Why didn't you use Java 2?</a></li>
+      <li><a href="#Where are all the Java class files that always seem to come with applets?">Where
+        are all the Java class files that always seem to come with applets?</a></li>
+      <li><a href="#What the heck is a &quot;Hex RGB Triplet&quot;?">What the heck is a &quot;Hex
+        RGB Triplet&quot;?</a></li>
+    </ul>
+    <dl>
+      <dt><a name="I'm totally lost, where do I start?"><strong>I'm totally lost, where do I
+        start?</strong></a></dt>
+      <dd>Everybody has to start somewhere. Read the <a href="HOW-TO.html">HOW-TO</a> file
+        carefully. It contains some real-world examples and tells you exactly what to do to place
+        this on your web page. Normally, you'll only have to upload three or four files to your
+        web directory and add some HTML tags to the page that will display the clock applet. If
+        the HOW-TO document still leaves you scratching your head, better <a
+        href="http://javaboutique.internet.com/tutorials/Thread0/add_java.html">start with some
+        Java applet basics</a>.</dd>
+      <dt><a name="How can I get my applet to synchronize with a network time server?"><strong>How
+        can I get my applet to synchronize with a network time server?</strong></a></dt>
+      <dd>Synchronizing to a network time server using Simple Network Time Protocol requires <a
+        href="http://www.kcmultimedia.com/sntpapi">KC Multimedia's SNTP API Package</a> for Java.
+        This is a comercially licensed package. To synchronize with an applet, the web server must
+        be running a special SNTP Proxy Server (provided with the SNTP Package) that relays
+        timestamps to an actual time server. SNTP synchronization is completely optional, and the
+        applet works well without it.&nbsp; However, without SNTP,&nbsp; it will only be as
+        accurate as the browser's system clock.</dd>
+      <dt><a name="Do I need the &quot;Source Code&quot;"><strong>Don't I need the &quot;Source
+        Code&quot;</strong></a></dt>
+      <dd>The source code is not needed to use the applet on your web page. Source code is not
+        available for BillsClock2.</dd>
+      <dt><a name="Can I use this on my company's web site?"><strong>Can I use this on my
+        company's web site?</strong></a></dt>
+      <dd>Sure, that's not a problem. If you have a place on your web site where you give credit
+        to applet authors, please include a small link to <a
+        href="http://www.kcmultimedia.com/sntpapi">http://www.kcmultimedia.com/sntpapi</a> (Please
+        don't put our email address on your page.)</dd>
+      <dt><strong><a name="Can I include this applet in my book or CD?">Can I include this applet
+        in my book or CD?</a></strong></dt>
+      <dd>If your book or CD is free, then the answer is yes. If you are planning to resell our
+        applet in your book or CD the you will have to purchase a license.</dd>
+      <dt><a name="Can't the applet be transparent so my web page's background image can be seen?"><strong>Can't
+        the applet be transparent so my web page's background image can be seen?</strong></a></dt>
+      <dd>There have been some involved &quot;workarounds&quot; that can simulate transparency in
+        some cases. But, unfortunately, there is no such thing as a transparent applet. (It would
+        be nice if there was.)</dd>
+      <dt><a name="How do I use .wav files for chimes?"><strong>How do I use .wav files for
+        chimes?</strong></a></dt>
+      <dd>Java applets use .au audio format for sound. If you have a wav file, an audio editor
+        such as <a href="http://www.goldwave.com">GoldWave</a> (shareware) can be used to convert
+        the wav to au. Remember that your visitors will have to download your audio files along
+        with the applet, so keep them as small as possible.</dd>
+      <dt><a name="Some visitors say that they see the wrong time. How come?"><strong>Some
+        visitors say that they see the wrong time. How come?</strong></a></dt>
+      <dd>This is nearly always due to the browser's computer being set to the correct local time,
+        but the wrong time zone. Windows, for example, defaults to Pacific time out of the box and
+        when first configured asks for the local time zone. Some people blow through this step
+        without setting the correct time zone, which will confuse our applet.</dd>
+      <dt><a
+        name="When I view the page with the applet all that I see is a blank gray square where the applet should be."><strong>When
+        I view the page with the applet all I see is a gray square.</strong></a></dt>
+      <dd>If this happens, make sure that you have uploaded all the files to your web directory
+        that are required, as documented in <a href="HOW-TO.html">HOW-TO.html</a>. Also make sure
+        that the type case (upper or lower) of the name was not changed when it was uploaded.
+        Finally make sure that you have uploaded the binary files (jar archive, .au adio files,
+        and GIF or JPG image files) as binary files, and not as ascii files.</dd>
+      <dt><a name="What's a &quot;Java Console&quot;?"><strong>What's a &quot;Java Console&quot;?</strong></a></dt>
+      <dd>The Java Console is a useful tool when you are installing and checking out Java applets.
+        Many applets display diagnostics and other general information in the Java Console when
+        they run. With Netscape Navigator 4.x and later, the Java Console is opened from the menu
+        Communicator|Tools|Java Console. With MSIE 5.x and later, Java Console is accessed under
+        View|Java Console. If you do not see Java Console listed under View, then use
+        Tools|Internet Options|Advanced, scroll down to the Java VM section, select Java Console
+        enabled, click OK, and restart MSIE.</dd>
+      <dt><strong><a
+        name="Why does the applet display an error message with Netscape 3.x (or MSIE 3.x)?">Why
+        does the applet display an error message with Netscape 3.x (or MSIE 3.x)?</a></strong></dt>
+      <dd>This applet uses the Java 1.1 specification, and will only run in web browsers that
+        support this. Netscape browsers 4.06 or later, and all MSIE versions 4.x or later support
+        Java 1.1. Current versions of Netscape, MSIE and Opera 5.12 all fully support Java 1.1.</dd>
+      <dt><a name="Why didn't you use Java 2?"><strong>Why didn't you use Java 2?</strong></a></dt>
+      <dd>Java 2 is especially nice in that it offers richer Time Zone support. But most web
+        surfers are still using 4.x generation browsers, which do not support Java 2. Requiring
+        visitors to download a special Java 2 plug-in was not an acceptable alternative. We wrote
+        the applet with Java 1.1 to provide good compatibility with most browsers ( including the
+        latest versions.)</dd>
+      <dt><a name="Where are all the Java class files that always seem to come with applets?"><strong>Where
+        are all the Java class files that always seem to come with applets?</strong></a></dt>
+      <dd>BillsClock2 consists of several class files, which are all packaged in the Java archive
+        (JAR) file billsclock2.jar. JAR files are essentially zip files, and contain the applet's
+        classes in one convenient file, using compression&nbsp; for maximum download efficiency on
+        the web. </dd>
+      <dt><a name="What the heck is a &quot;Hex RGB Triplet&quot;?"><strong>What the heck is a
+        &quot;Hex RGB Triplet&quot;?</strong></a></dt>
+      <dd>This is a Red-Green-Blue color triplet, expressed in hexadecimal. For example, the color
+        red is 255, 0, 0 which is FF0000 in hexadecimal. Usually a '#' sign precedes this by HTML
+        convention, so the color red could be expressed as &quot;#FF0000&quot;. Black is
+        &quot;#000000&quot; and white is &quot;#FFFFFF&quot;.</dd>
+    </dl>
+    <hr size="1">
+    <p align="center">Copyright (C) 2001 by <a href="mailto:bgiel@kcmultimedia.com">Bill Giel</a>.
+    All rights reserved.</td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,642 @@
+<html>
+
+<head>
+<title>BillsClock2 How-To</title>
+</head>
+
+<body>
+<div align="center"><center>
+
+<table border="0" cellpadding="2" width="550">
+  <tr>
+    <td width="100%"><h1 align="left">How to use BillsClock2 on your website</h1>
+    <p align="left">When you unpack the distribution, you should find a number of files in the
+    extracted folder, this file (<em>HOW-TO.html</em>) being one of them</p>
+    <ul>
+      <li><p align="left"><em>*.au</em> files - a variety of sound files from which you can
+        customise the optional chimes. </p>
+      </li>
+      <li><p align="left"><em>*.jpg</em> files - a few basic clock images in 300x300 and 150x150
+        format. (Note that GIF files are also supported, although we are using JPG's in our
+        examples.)</p>
+      </li>
+      <li><p align="left"><em>billsclock2.jar</em> - a java archive file that contains all the
+        applet's classfiles in a fast-downloading, compressed format.</p>
+      </li>
+      <li><p align="left"><a href="FAQ.html"><em>FAQ.html</em></a> - an HTML file that contains
+        some commonly asked questions and answers concerning BillsClock2</p>
+      </li>
+      <li><p align="left"><a href="LICENSE.txt"><em>LICENSE.txt</em></a> - By using this applet,
+        you agree to the terms of the license. Please read the license agreement carefully.</p>
+      </li>
+    </ul>
+    <h2 align="left">Installation</h2>
+    <ul>
+      <li><p align="left">Upload the file <em>billsclock2.jar</em> to your web directory. (Be sure
+        to upload this file as&nbsp; binary and not ascii.) This is a java archve containig all
+        class files required by the applet in an efficient, compressed format. Do not unpack this
+        jar file - it is intended to be used as-is.</p>
+      </li>
+      <li><p align="left">If you want your clock to chime, choose the <em>.au</em> audio file(s)
+        that you prefer and upload to the web directory that contains billsclock2.jar. The clock
+        can optionally&nbsp; chime on the hour and half-hour, and you can use the same or
+        different audio file for the hour and half-hours. Just make sure that the .au files you
+        configure the applet to use are in the web directory where the applet will be kept. Upload
+        audio files as binary and not ascii. (<em>Note that only .au format is supported.</em>)</p>
+      </li>
+      <li><p align="left">Pick the <em>.jpg</em> (or <em>.gif</em>) image that you want to use for
+        your clock face. You can use those provided, or you can find/create your own. If you use
+        your own image, you will probably have to make some minor changes in the sample HTML code
+        to reflect the size of the clock if different, and dimensions/placement of the hands.
+        GIF's are supported, in addition to JPG format. Both images and audio files should be
+        uploaded (as binary rather than ascii) to the same web directory in which <em>billsclock2.jar</em>
+        was saved.</p>
+      </li>
+      <li><p align="left">Create an HTML page (or use an existing one) to display the applet. This
+        HTML file should be placed in the same web directory that contains <em>billsclock2.jar</em>.
+        Sample applet tags are provided below. Read the <a href="#Applet Parameter Details">descriptions
+        of the applet's parameters</a> to see how you can tweak and configure the applet to
+        accomodate your own images, sound files, time zones, etc.</p>
+      </li>
+    </ul>
+    <h2 align="left">Example HTML Tags</h2>
+    <p align="left">The following examples represent three typical installations.</p>
+    <h3 align="left">Example One (300 x 300)</h3>
+    <p align="left">This example chimes on the hour and half-hour, displays the date and
+    &nbsp; AM/PM. See the <a href="#Applet Parameter Details">applet parameter details</a> for
+    more information about configuring the applet.</p>
+    <p align="center">
+    <applet code="BillsClock2" width="300" height="300" ALIGN="middle">
+      <param name="ARCHIVE" value="billsclock2.jar">
+      <param name="BGIMAGE" value="24clock300.jpg">
+      <param name="CENTERX" value="150">
+      <param name="CENTERY" value="150">
+      <param name="HOURCOLOR" value="#808080">
+      <param name="MINUTECOLOR" value="#000000">
+      <param name="SWEEPCOLOR" value="#ff0000">
+      <param name="HOURLENGTH" value="60">
+      <param name="HOURTHICK" value="7">
+      <param name="MINUTELENGTH" value="100">
+      <param name="MINUTETHICK" value="7">
+      <param name="SHOWSWEEP" value="1">
+      <param name="SWEEPLENGTH" value="100">
+      <param name="FONTSIZE" value="12">
+      <param name="USE_SNTP" value="0">
+      <param name="SNTP_PORT" value="1200">
+      <param name="SHOW_DATE" value="1">
+      <param name="SHOW_AMPM" value="1">
+      <param name="SNTP_SAMPLES" value="3">
+      <param name="BGCOLOR" value="#ffffff">
+      <param name="FGCOLOR" value="#000000">
+      <param name="TIMEZONE" value="GMT">
+      <param name="HOUR_CHIMES" value="bells.au">
+      <param name="HALFHOUR_CHIMES" value="bells.au">
+      <param name="SYNC_MESSAGE" value="Synchronizing...">
+      <param name="VERBOSE" value="1">
+    </applet>
+    <br>
+    <strong>Coordinated Universal Time</strong></p>
+    <p align="left">Here's what the above applet's HTML tags look like:</p>
+    <pre>
+&lt;applet code=&quot;BillsClock2&quot; width=&quot;300&quot;height=&quot;300&quot;&gt;
+	&lt;param name=&quot;ARCHIVE&quot; value=&quot;billsclock2.jar&quot;&gt;
+	&lt;param name=&quot;BGIMAGE&quot; value=&quot;24clock300.jpg&quot;&gt;
+	&lt;param name=&quot;CENTERX&quot; value=&quot;150&quot;&gt;
+	&lt;param name=&quot;CENTERY&quot; value=&quot;150&quot;&gt;
+	&lt;param name=&quot;HOURCOLOR&quot; value=&quot;#000000&quot;&gt;
+	&lt;param name=&quot;MINUTECOLOR&quot; value=&quot;#000000&quot;&gt;
+	&lt;param name=&quot;SWEEPCOLOR&quot; value=&quot;#ff0000&quot;&gt;
+	&lt;param name=&quot;HOURLENGTH&quot; value=&quot;60&quot;&gt;
+	&lt;param name=&quot;HOURTHICK&quot; value=&quot;7&quot;&gt;
+	&lt;param name=&quot;MINUTELENGTH&quot; value=&quot;100&quot;&gt;
+	&lt;param name=&quot;MINUTETHICK&quot; value=&quot;7&quot;&gt;
+	&lt;param name=&quot;SHOWSWEEP&quot; value=&quot;1&quot;&gt;
+	&lt;param name=&quot;SWEEPLENGTH&quot; value=&quot;100&quot;&gt;
+	&lt;param name=&quot;FONTSIZE&quot; value=&quot;12&quot;&gt;
+	&lt;param name=&quot;USE_SNTP&quot; value=&quot;0&quot;&gt;
+	&lt;param name=&quot;SNTP_PORT&quot; value=&quot;1200&quot;&gt;
+	&lt;param name=&quot;SHOW_DATE&quot; value=&quot;1&quot;&gt;
+	&lt;param name=&quot;SHOW_AMPM&quot; value=&quot;1&quot;&gt;
+	&lt;param name=&quot;SNTP_SAMPLES&quot; value=&quot;3&quot;&gt;
+	&lt;param name=&quot;BGCOLOR&quot; value=&quot;#ffffff&quot;&gt;
+	&lt;param name=&quot;FGCOLOR&quot; value=&quot;#000000&quot;&gt;
+	&lt;param name=&quot;TIMEZONE&quot; value=&quot;GMT&quot;&gt;
+	&lt;param name=&quot;HOUR_CHIMES&quot; value=&quot;bells.au&quot;&gt;
+	&lt;param name=&quot;HALFHOUR_CHIMES&quot; value=&quot;bells.au&quot;&gt;
+	&lt;param name=&quot;SYNC_MESSAGE&quot; value=&quot;Synchronizing...&quot;&gt;
+	&lt;param name=&quot;VERBOSE&quot; value=1&gt;
+&lt;/applet&gt;</pre>
+    <h3 align="left">Example Two (150 x 150)</h3>
+    <p align="left">This applet does not chime, and does not display the date. It uses a
+    smaller clock face. See the <a href="#Applet Parameter Details">applet parameter details</a>
+    for further information on configuring this applet.</p>
+    <p align="center">
+    <applet code="BillsClock2" width="150" height="150" ALIGN="middle">
+      <param name="ARCHIVE" value="billsclock2.jar">
+      <param name="BGCOLOR" value="#ffffff">
+      <param name="BGIMAGE" value="clock150.jpg">
+      <param name="CENTERX" value="75">
+      <param name="CENTERY" value="75">
+      <param name="FGCOLOR" value="#000000">
+      <param name="FONTSIZE" value="10">
+      <param name="HOURCOLOR" value="#000000">
+      <param name="HOURLENGTH" value="30">
+      <param name="HOURTHICK" value="3">
+      <param name="MINUTECOLOR" value="#ABA198">
+      <param name="MINUTELENGTH" value="50">
+      <param name="MINUTETHICK" value="3">
+      <param name="SHOW_DATE" value="0">
+      <param name="SHOW_AMPM" value="1">
+      <param name="SHOWSWEEP" value="1">
+      <param name="SNTP_PORT" value="1200">
+      <param name="SNTP_SAMPLES" value="3">
+      <param name="SWEEPCOLOR" value="#8D7F73">
+      <param name="SWEEPLENGTH" value="50">
+      <param name="TIMEZONE" value="EST">
+      <param name="USE_SNTP" value="0">
+      <param name="SYNC_MESSAGE" value="Stand by...">
+      <param name="VERBOSE" value="0">
+    </applet>
+    <br>
+    <strong>U.S. Eastern Time</strong></p>
+    <pre>&lt;applet code=&quot;BillsClock2&quot; width=&quot;150&quot; height=&quot;150&quot;&gt;
+      &lt;param name=&quot;ARCHIVE&quot; value=&quot;billsclock2.jar&quot;&gt;
+      &lt;param name=&quot;BGCOLOR&quot; value=&quot;#ffffff&quot;&gt;
+      &lt;param name=&quot;BGIMAGE&quot; value=&quot;clock150.jpg&quot;&gt;
+      &lt;param name=&quot;CENTERX&quot; value=&quot;75&quot;&gt;
+      &lt;param name=&quot;CENTERY&quot; value=&quot;75&quot;&gt;
+      &lt;param name=&quot;FGCOLOR&quot; value=&quot;#000000&quot;&gt;
+      &lt;param name=&quot;FONTSIZE&quot; value=&quot;10&quot;&gt;
+      &lt;param name=&quot;HOURCOLOR&quot; value=&quot;#000000&quot;&gt;
+      &lt;param name=&quot;HOURLENGTH&quot; value=&quot;30&quot;&gt;
+      &lt;param name=&quot;HOURTHICK&quot; value=&quot;3&quot;&gt;
+      &lt;param name=&quot;MINUTECOLOR&quot; value=&quot;#ABA198&quot;&gt;
+      &lt;param name=&quot;MINUTELENGTH&quot; value=&quot;50&quot;&gt;
+      &lt;param name=&quot;MINUTETHICK&quot; value=&quot;3&quot;&gt;
+      &lt;param name=&quot;SHOW_DATE&quot; value=&quot;0&quot;&gt;
+      &lt;param name=&quot;SHOW_AMPM&quot; value=&quot;1&quot;&gt;
+      &lt;param name=&quot;SHOWSWEEP&quot; value=&quot;1&quot;&gt;
+      &lt;param name=&quot;SNTP_PORT&quot; value=&quot;1200&quot;&gt;
+      &lt;param name=&quot;SNTP_SAMPLES&quot; value=&quot;3&quot;&gt;
+      &lt;param name=&quot;SWEEPCOLOR&quot; value=&quot;#8D7F73&quot;&gt;
+      &lt;param name=&quot;SWEEPLENGTH&quot; value=&quot;50&quot;&gt;
+      &lt;param name=&quot;TIMEZONE&quot; value=&quot;EST&quot;&gt;
+      &lt;param name=&quot;USE_SNTP&quot; value=&quot;0&quot;&gt;
+      &lt;param name=&quot;SYNC_MESSAGE&quot; value=&quot;Stand by...&quot;&gt;
+      &lt;param name=&quot;VERBOSE&quot; value=0&gt;    
+&lt;/applet&gt;</pre>
+    <p>&nbsp;</p>
+    <h3 align="left">Example Three (300 x 300)</h3>
+    <p align="left">This example displays the date, but it does not chime. (One chimer per
+    page is enough.) By not specifying a particular time zone, this applet will default to the
+    timezone of the visitor's computer. See the <a href="#Applet Parameter Details">applet
+    parameter details</a> for more information about configuring the applet.</p>
+    <p align="center">
+    <applet code="BillsClock2" width="300" height="300" ALIGN="middle">
+      <param name="ARCHIVE" value="billsclock2.jar">
+      <param name="BGCOLOR" value="#ffffff">
+      <param name="BGIMAGE" value="clock300.jpg">
+      <param name="CENTERX" value="150">
+      <param name="CENTERY" value="150">
+      <param name="FGCOLOR" value="#000000">
+      <param name="FONTSIZE" value="12">
+      <param name="HOURCOLOR" value="#808080">
+      <param name="HOURLENGTH" value="60">
+      <param name="HOURTHICK" value="7">
+      <param name="MINUTECOLOR" value="#ABA198">
+      <param name="MINUTELENGTH" value="100">
+      <param name="MINUTETHICK" value="7">
+      <param name="SHOW_DATE" value="1">
+      <param name="SHOW_AMPM" value="1">
+      <param name="SHOWSWEEP" value="1">
+      <param name="SNTP_PORT" value="1200">
+      <param name="SNTP_SAMPLES" value="3">
+      <param name="SWEEPCOLOR" value="#8D7F73">
+      <param name="SWEEPLENGTH" value="100">
+      <param name="SYNC_MESSAGE" value="Synchronizing...">
+      <param name="USE_SNTP" value="0">
+      <param name="VERBOSE" value="0">
+    </applet>
+    <br>
+    <strong>Your Local Time</strong></p>
+    <p align="left">Here's what the above applet's HTML tags look like:</p>
+    <pre>
+&lt;applet code=&quot;BillsClock2&quot; width=&quot;300&quot;height=&quot;300&quot;&gt;
+	&lt;param name=&quot;ARCHIVE&quot; value=&quot;billsclock2.jar&quot;&gt;
+	&lt;param name=&quot;BGIMAGE&quot; value=&quot;clock300.jpg&quot;&gt;
+	&lt;param name=&quot;CENTERX&quot; value=&quot;150&quot;&gt;
+	&lt;param name=&quot;CENTERY&quot; value=&quot;150&quot;&gt;
+	&lt;param name=&quot;HOURCOLOR&quot; value=&quot;#000000&quot;&gt;
+	&lt;param name=&quot;MINUTECOLOR&quot; value=&quot;#ABA198&quot;&gt;
+	&lt;param name=&quot;SWEEPCOLOR&quot; value=&quot;#8D7F73&quot;&gt;
+	&lt;param name=&quot;HOURLENGTH&quot; value=&quot;60&quot;&gt;
+	&lt;param name=&quot;HOURTHICK&quot; value=&quot;7&quot;&gt;
+	&lt;param name=&quot;MINUTELENGTH&quot; value=&quot;100&quot;&gt;
+	&lt;param name=&quot;MINUTETHICK&quot; value=&quot;7&quot;&gt;
+	&lt;param name=&quot;SHOWSWEEP&quot; value=&quot;1&quot;&gt;
+	&lt;param name=&quot;SWEEPLENGTH&quot; value=&quot;100&quot;&gt;
+	&lt;param name=&quot;FONTSIZE&quot; value=&quot;12&quot;&gt;
+	&lt;param name=&quot;USE_SNTP&quot; value=&quot;0&quot;&gt;
+	&lt;param name=&quot;SNTP_PORT&quot; value=&quot;1200&quot;&gt;
+	&lt;param name=&quot;SHOW_DATE&quot; value=&quot;1&quot;&gt;
+        &lt;param name=&quot;SHOW_AMPM&quot; value=&quot;1&quot;&gt;
+	&lt;param name=&quot;SNTP_SAMPLES&quot; value=&quot;3&quot;&gt;
+	&lt;param name=&quot;BGCOLOR&quot; value=&quot;#ffffff&quot;&gt;
+	&lt;param name=&quot;FGCOLOR&quot; value=&quot;#000000&quot;&gt;
+	&lt;param name=&quot;SYNC_MESSAGE&quot; value=&quot;Synchronizing...&quot;&gt;
+	&lt;param name=&quot;VERBOSE&quot; value=0&gt;
+&lt;/applet&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">&nbsp;<h3><a name="Applet Parameter Details">Applet Parameter Details</a></h3>
+    <p>The appearance and initial settings of the applet are controlled by HTML applet
+    parameter tags.&nbsp; In addition to height and width, the applet's other configurable
+    parameters are depicted in the table below: If the default value is acceptable, the
+    parameter can be omitted from the HTML. (Our examples have overspecified some defaults
+    simply for the sake of showing how all parameters are used.)</p>
+    <div align="center"><center><table border="1" width="490" cellpadding="2" cellspacing="0"
+    bordercolor="#C0C0C0" bordercolorlight="#C0C0C0" bordercolordark="#C0C0C0">
+      <tr>
+        <td bgcolor="#C0C0C0" bordercolor="#000000"><p align="center"><strong>Name</strong></td>
+        <td bgcolor="#C0C0C0" bordercolor="#000000"><p align="center"><strong>Type</strong></td>
+        <td bgcolor="#C0C0C0" bordercolor="#000000"><p align="center"><strong>Description</strong></td>
+        <td bgcolor="#C0C0C0" bordercolor="#000000"><p align="center"><strong>Default</strong></td>
+      </tr>
+      <tr>
+        <td>BGCOLOR</td>
+        <td>Hex RGB Triplet</td>
+        <td>HTML-style Color designation for applet background. If the clock image is transparent,
+        this is the color that will be visible.</td>
+        <td>#FFFFFF (White)</td>
+      </tr>
+      <tr>
+        <td>FGCOLOR</td>
+        <td>Hex RGB Triplet</td>
+        <td>HTML-style Color designation for applet foreground</td>
+        <td>#000000 (Black)</td>
+      </tr>
+      <tr>
+        <td>CENTERX</td>
+        <td>Integer</td>
+        <td>The X-Coordinate of the clock's hands origin point</td>
+        <td>.5 x Width</td>
+      </tr>
+      <tr>
+        <td>CENTERY</td>
+        <td>Integer</td>
+        <td>The Y-Coordinate of the clock's hands origin point</td>
+        <td>.5 x Height</td>
+      </tr>
+      <tr>
+        <td>FONTFACE</td>
+        <td>String</td>
+        <td>Name of font face for text display areas: Courier, TimesRoman, or Helvetica</td>
+        <td>Helvetica</td>
+      </tr>
+      <tr>
+        <td>FONTSIZE</td>
+        <td>Integer</td>
+        <td>Size of date and/or AM PM test in pixels</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>SWEEPCOLOR</td>
+        <td>Hex RGB Triplet</td>
+        <td>HTML-style Color designation for applet's second hand</td>
+        <td>#FF0000 (Red)</td>
+      </tr>
+      <tr>
+        <td>MINUTECOLOR</td>
+        <td>Hex RGB Triplet</td>
+        <td>HTML-style Color designation for applet's minute hand</td>
+        <td>#c0c0c0 (Gray)</td>
+      </tr>
+      <tr>
+        <td>HOURCOLOR</td>
+        <td>Hex RGB Triplet</td>
+        <td>HTML-style Color designation for applet's hour hand</td>
+        <td>#000000 (Black)</td>
+      </tr>
+      <tr>
+        <td>SYNC_MESSAGE</td>
+        <td>String</td>
+        <td>Brief message to display while the applet synchronizes with the SNTP server</td>
+        <td>&quot;Please stand by...&quot;</td>
+      </tr>
+      <tr>
+        <td>BGIMAGE</td>
+        <td>String</td>
+        <td>Name of image file to display as the clock face</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>TIMEZONE</td>
+        <td>String</td>
+        <td>3-Char abbreviation of zone name (taken from the <a href="#Supported Time Zones">table
+        of supported Time Zones</a>) If this parameter is omitted, than the clock will display the
+        browser's local time.</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>HOUR_CHIMES</td>
+        <td>String</td>
+        <td>Optional audio file (.au format only) for on the hour chimes. Leave this parameter out
+        if you do not want hourly chimes.</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>HALFHOUR_CHIMES</td>
+        <td>String</td>
+        <td>Optional audio file (.au format only) for on the half-hour chimes. Leave this
+        parameter out if you do not want half-hourly chimes.This can be the same or a different
+        audio file than hourly chimes</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>SHOWSWEEP</td>
+        <td>Integer</td>
+        <td>1 will show a moving &quot;second&quot; hand or sweep hand. 0 will disable the sweep
+        hand.</td>
+        <td>1 (Enabled)</td>
+      </tr>
+      <tr>
+        <td>HOURLENGTH</td>
+        <td>Integer</td>
+        <td>The length of the hour hand in pixels.</td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>HOURTHICK</td>
+        <td>Integer</td>
+        <td>The width of the hour hand in pixels.</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>MINUTELENGTH</td>
+        <td>Integer</td>
+        <td>The length of the minute hand in pixels.</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>MINUTETHICK</td>
+        <td>Integer</td>
+        <td>The width of the minute hand in pixels.</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>SWEEPLENGTH</td>
+        <td>Integer</td>
+        <td>The length of the sweep hand in pixels</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>VERBOSE</td>
+        <td>Integer</td>
+        <td>1 - Display informational messages in the Java Console. 0 - Do not display general
+        information in the Java Console.</td>
+        <td>1 (Enabled)</td>
+      </tr>
+      <tr>
+        <td>*USE_SNTP</td>
+        <td>Integer</td>
+        <td>0 - disable SNTP synchronization. 1 enables SNTP</td>
+        <td>0 (SNTP Disabled)</td>
+      </tr>
+      <tr>
+        <td>SNTP_PORT</td>
+        <td>Integer</td>
+        <td>Port on which the SNTP Proxy app listens on the home server to relay packets to the
+        actual NTP server</td>
+        <td>1200</td>
+      </tr>
+      <tr>
+        <td>SNTP_SAMPLES</td>
+        <td>Integer</td>
+        <td>The maximum number of SNTP connections to calculate a mean</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td colspan="4">* <font size="-1">Do not enable SNTP if you are not running the
+        server-side components needed for it to work. These are commercially licensed components
+        that cannot be redistributed with this applet. It will not hurt anything if you enable it,
+        but the applet will not synchronize, and this may delay the initiallization of the applet.</font></td>
+      </tr>
+    </table>
+    </center></div><h3><a name="Supported Time Zones">Supported Time Zones</a></h3>
+    <p>The following time zones are supported by JDK 1.1.8 (and as implemented in Netscape
+    version 4.x and all versions of MS Internet Explorer 4.x or later)</p>
+    <div align="center"><center><table border="1" cellpadding="2" cellspacing="0"
+    bordercolor="#C0C0C0" bordercolorlight="#C0C0C0" bordercolordark="#C0C0C0" width="490">
+      <tr>
+        <td width="75" align="center" bgcolor="#C0C0C0" bordercolor="#000000"><strong>Zone ID</strong></td>
+        <td width="250" align="center" bgcolor="#C0C0C0" bordercolor="#000000"><strong>Zone Name</strong></td>
+        <td width="75" align="center" bgcolor="#C0C0C0" bordercolor="#000000"><strong>Offset</strong></td>
+        <td width="100" align="center" bgcolor="#C0C0C0" bordercolor="#000000"><strong>Uses
+        Daylight Time</strong></td>
+      </tr>
+      <tr>
+        <td width="75">GMT</td>
+        <td width="250">Greenwich Mean Time</td>
+        <td width="75" align="right">0</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">UTC</td>
+        <td width="250">GMT+00:00</td>
+        <td width="75" align="right">0</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">ECT</td>
+        <td width="250">Central European Standard Time</td>
+        <td width="75" align="right">60</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">EET</td>
+        <td width="250">GMT+02:00</td>
+        <td width="75" align="right">120</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">ART</td>
+        <td width="250">GMT+02:00</td>
+        <td width="75" align="right">120</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">EAT</td>
+        <td width="250">GMT+03:00</td>
+        <td width="75" align="right">180</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">MET</td>
+        <td width="250">GMT+03:30</td>
+        <td width="75" align="right">210</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">NET</td>
+        <td width="250">GMT+04:00</td>
+        <td width="75" align="right">240</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">PLT</td>
+        <td width="250">GMT+05:00</td>
+        <td width="75" align="right">300</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">IST</td>
+        <td width="250">GMT+05:30</td>
+        <td width="75" align="right">330</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">BST</td>
+        <td width="250">GMT+06:00</td>
+        <td width="75" align="right">360</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">VST</td>
+        <td width="250">GMT+07:00</td>
+        <td width="75" align="right">420</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">CTT</td>
+        <td width="250">China Standard Time</td>
+        <td width="75" align="right">480</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">JST</td>
+        <td width="250">Japan Standard Time</td>
+        <td width="75" align="right">540</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">ACT</td>
+        <td width="250">GMT+09:30</td>
+        <td width="75" align="right">570</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">AET</td>
+        <td width="250">GMT+11:00</td>
+        <td width="75" align="right">600</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">SST</td>
+        <td width="250">GMT+11:00</td>
+        <td width="75" align="right">660</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">NST</td>
+        <td width="250">GMT+12:00</td>
+        <td width="75" align="right">720</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">MIT</td>
+        <td width="250">GMT-11:00</td>
+        <td width="75" align="right">-660</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">HST</td>
+        <td width="250">Hawaii Standard Time</td>
+        <td width="75" align="right">-600</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">AST</td>
+        <td width="250">Alaska Standard Time</td>
+        <td width="75" align="right">-540</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">PST</td>
+        <td width="250">Pacific Standard Time</td>
+        <td width="75" align="right">-480</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">PNT</td>
+        <td width="250">Mountain Standard Time</td>
+        <td width="75" align="right">-420</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">MST</td>
+        <td width="250">Mountain Standard Time</td>
+        <td width="75" align="right">-420</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">CST</td>
+        <td width="250">Central Standard Time</td>
+        <td width="75" align="right">-360</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">EST</td>
+        <td width="250">Eastern Standard Time</td>
+        <td width="75" align="right">-300</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">IET</td>
+        <td width="250">Eastern Standard Time</td>
+        <td width="75" align="right">-300</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">PRT</td>
+        <td width="250">GMT-04:00</td>
+        <td width="75" align="right">-240</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">CNT</td>
+        <td width="250">Newfoundland Standard Time</td>
+        <td width="75" align="right">-210</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">AGT</td>
+        <td width="250">GMT-03:00</td>
+        <td width="75" align="right">-180</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="75">BET</td>
+        <td width="250">GMT-02:00</td>
+        <td width="75" align="right">-180</td>
+        <td width="100" align="center">true</td>
+      </tr>
+      <tr>
+        <td width="75">CAT</td>
+        <td width="250">GMT-01:00</td>
+        <td width="75" align="right">-60</td>
+        <td width="100" align="center">false</td>
+      </tr>
+      <tr>
+        <td width="500" colspan="4" bgcolor="#C0C0C0"><em>Note: We have not tested the applet with
+        all time zones, however these are documented as supported by JavaSoft.</em></td>
+      </tr>
+    </table>
+    </center></div><hr size="1">
+    <p align="center">Copyright (C) 2001 by <a href="mailto:bgiel@kcmultimedia.com">Bill Giel</a>.
+    All rights reserved.</td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

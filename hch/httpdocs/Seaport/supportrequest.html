@@ -1,0 +1,209 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body topmargin="0" leftmargin="0" background="Sidebar_Blue_withBeigeForcolor5.jpg">
+<?
+if ($Name && $flag = 1)
+{
+	$message = "Name: $Name\nAddress: $txtAddr\nCity: $txtCity\tState: $txtState\tZip: $txtZip\n
+				Country: $txtCountry\nPhone: $txtPhone\nEmail: $txtEmail\nNetworkMgmtSupport: $chkNetworkMgmtSupport\n
+				NetworkMgmtSupportDate: $txtNetworkMgmtSupport\nImplementationAssist: $chkImpleAssist\n
+				DateImplementationAssist: $txtImpleAssist\nSysMgmtSup: $chkSysMgmtSup\n
+				DateSysMgmtSup: $txtSysMgmtSup\nSecurityAnalysisSup: $chkSecAnalSup\nDateSecurityAnalysisSup: txtSecAnalSup\n
+				ProdEvalSup: $chkProdEvalSup\nDateProdEvalSup: $txtProdEvalSup\nProgMgmt: $chkProgMgmt\nDateProgMgmt: $txtProgMgmt\n
+				BriefDesc: $BriefDesc";
+	$extra = "From: $Name\r\nReply-To: $Email\r\n";
+	mail ("spisano@comcast.net", "Website Email", $message, $extra);
+	echo "Thanks for your inguiry, $Name.";
+	echo "A response will be sent to $Email as soon as possible.";
+}
+
+
+<? $flag = 1 ?>
+<div align="left">
+  <table border="0" width="100%" height="315" align="left" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" colspan="2" background="Toppart11.jpg" height="109">
+        <div align="center">
+          <center>
+          <table border="0" width="100%" cellspacing="0" cellpadding="0" height="76">
+            <tr>
+              <td width="31%" height="76"></td>
+              <td width="66%" height="76" valign="top"><img border="0" src="name2.GIF" width="426" height="64"></td>
+              <td width="3%" height="76"></td>
+            </tr>
+          </table>
+          </center>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td width="26%" height="194" valign="top"><map name="FPMap0">
+        <area href="index.html" shape="rect" coords="36, 26, 160, 64">
+        <area href="about.html" shape="rect" coords="35, 67, 158, 106">
+        <area href="solutions.html" shape="rect" coords="35, 108, 160, 151">
+        <area href="services.html" shape="rect" coords="34, 152, 161, 196">
+        <area href="directory.html" shape="rect" coords="34, 198, 160, 240"></map><img border="0" src="beigebutton6imagemap.jpg" usemap="#FPMap0" width="178" height="378"></td>
+      <td width="74%" height="194" valign="top" align="left">
+        <form method="POST" name="suprequest" action="supportrequest.php">
+          <p align="left"><font size="4" color="#000080">Request for Technical
+          Support</font></p>
+          <div align="left">
+            <table border="0" width="80%">
+              <tr>
+                <td width="100%">
+                  <p align="left"><font color="#000080">Fields Marked with an *
+                  are Required</font></td>
+              </tr>
+            </table>
+          </div>
+          <div align="center">
+            <center>
+            <table border="0" width="100%" cellspacing="0" cellpadding="0" height="341">
+              <tr>
+                <td width="50%" height="21"><font color="#000080"><u>Need
+                  Assistance For:</u></font></td>
+                <td width="3%" rowspan="2" height="30"></td>
+                <td width="47%" height="21"><font color="#000080"><u>When Needed</u></font></td>
+              </tr>
+              <tr>
+                <td width="50%" height="9"></td>
+                <td width="47%" height="9"></td>
+              </tr>
+              <tr>
+                <td width="50%" height="25"><font color="#000080"><input type="checkbox" name="chkNetworkMgmtSupport" value="ON">Network
+                  Management Support</font></td>
+                <td width="3%" height="25"></td>
+                <td width="47%" height="25"><font color="#000080"><input type="text" name="txtNetworkMgmtSupport" size="12"></font></td>
+              </tr>
+              <tr>
+                <td width="50%" height="25"><font color="#000080"><input type="checkbox" name="chkImpleAssist" value="ON">Implementation
+                  Assistance</font></td>
+                <td width="3%" height="25"></td>
+                <td width="47%" height="25"><font color="#000080"><input type="text" name="txtImpleAssist" size="12"></font></td>
+              </tr>
+              <tr>
+                <td width="50%" height="25"><font color="#000080"><input type="checkbox" name="chkSysMgmtSup" value="ON">Systems
+                  Management Support</font></td>
+                <td width="3%" height="25"></td>
+                <td width="47%" height="25"><font color="#000080"><input type="text" name="txtSysMgmtSup" size="12"></font></td>
+              </tr>
+              <tr>
+                <td width="50%" height="25"><font color="#000080"><input type="checkbox" name="chkSecAnalSup" value="ON">Security
+                  Analysis &amp; Support</font></td>
+                <td width="3%" height="25"></td>
+                <td width="47%" height="25"><font color="#000080"><input type="text" name="txtSecAnalSup" size="12"></font></td>
+              </tr>
+              <tr>
+                <td width="50%" height="25"><font color="#000080"><input type="checkbox" name="chkProdEvalSup" value="ON">Production
+                  Evaluation &amp; Support</font></td>
+                <td width="3%" height="25"></td>
+                <td width="47%" height="25"><font color="#000080"><input type="text" name="txtProdEvalSup" size="12"></font></td>
+              </tr>
+              <tr>
+                <td width="50%" height="25"><font color="#000080"><input type="checkbox" name="chkProgMgmt" value="ON">Project/Program
+                  Management</font></td>
+                <td width="3%" height="25"></td>
+                <td width="47%" height="25"><font color="#000080"><input type="text" name="txtProgMgmt" size="12"></font></td>
+              </tr>
+              <tr>
+                <td width="50%" height="21"></td>
+                <td width="3%" rowspan="2" height="42"></td>
+                <td width="47%" rowspan="2" height="42"></td>
+              </tr>
+            </center>
+            <tr>
+              <td width="50%" height="21"><font color="#000080">Brief
+                Description:</font></td>
+            </tr>
+            <tr>
+              <td width="100%" colspan="3" height="119">
+                <blockquote>
+                  <p align="left"><font color="#000080"><textarea rows="4" name="BriefDesc" cols="47"></textarea></font></p>
+                </blockquote>
+              </td>
+            </tr>
+            <center>
+            </table>
+            </center>
+          </div>
+          <div align="center">
+            <center>
+            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="12%"><font color="#000080" size="2">*Name:</font></td>
+                <td width="88%" colspan="3"><font size="2"><input type="text" name="txtName" size="42"></font></td>
+              </tr>
+              <tr>
+                <td width="12%"><font color="#000080" size="2">Address:</font></td>
+                <td width="88%" colspan="3"><font size="2"><input type="text" name="txtAddr" size="42"></font></td>
+              </tr>
+              <tr>
+                <td width="12%"><font color="#000080" size="2">City:</font></td>
+                <td width="35%"><font size="2"><input type="text" name="txtCity" size="20"></font></td>
+                <td width="20%"><font color="#000080" size="2">State/Prov:</font></td>
+                <td width="33%"><font size="2"><input type="text" name="txtState" size="14"></font></td>
+              </tr>
+              <tr>
+                <td width="12%"><font color="#000080" size="2">Country:</font></td>
+                <td width="35%"><font size="2"><input type="text" name="txtCountry" size="20"></font></td>
+                <td width="20%"><font color="#000080" size="2">Zip/Postal Code:</font></td>
+                <td width="33%"><font size="2"><input type="text" name="txtZip" size="14"></font></td>
+              </tr>
+              <tr>
+                <td width="12%"><font color="#000080" size="2">*Phone:</font></td>
+                <td width="88%" colspan="3"><font size="2"><input type="text" name="txtPhone" size="25"></font></td>
+              </tr>
+              <tr>
+                <td width="12%"><font color="#000080" size="2">*E-mail</font></td>
+                <td width="88%" colspan="3"><font size="2"><input type="text" name="txtEmail" size="25"></font></td>
+              </tr>
+            </table>
+            </center>
+          </div>
+          <div align="center">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="100%">
+                  <p align="center"><font color="#F7F3E7">______________________</font></td>
+                <center>
+                </tr>
+              </table>
+            </center>
+          </div>
+          <div align="center">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="47%">
+                  <p align="right"><input type="submit" value="Submit Form" name="Submit"></td>
+                <center>
+                <td width="5%"></td>
+                <td width="48%"><input type="reset" value="Clear Form" name="Reset"></td>
+                </tr>
+              </table>
+            </center>
+          </div>
+        </form>
+        <p align="center"><img border="0" src="img7.gif" width="143" height="52"></p>
+        <p align="center"><img border="0" src="img8.gif" width="419" height="12"></p>
+        <p align="center"><font color="#000080" face="Arial">To Contact Us:</font></p>
+        <p align="center"><font color="#000080" face="Arial" size="1"><b>Phone:
+        401-568-5778<br>
+        Fax: 401-568-5537<br>
+        Email: <a href="mailto:Hodge@HCHEnterprisesllc.com">Hodge@HCHEnterprisesllc.com</a><br>
+        9 Old Snake Hill Rd.<br>
+        Glocester, RI 02814</b></font></p>
+        <p>&nbsp;</td>
+    </tr>
+  </table>
+</div>
+
+</body>
+
+</html>

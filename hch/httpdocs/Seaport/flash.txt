@@ -1,0 +1,9 @@
+logo= HCH Enterprises, LLC
+&logo-subpages= HCH Enterprises, LLC
+&slogan=  Global Information Technology
+&line1= Need to upgrade Systems Infrastructure...
+&line2= Lower costs and improve services...
+&line3= Your  investment in IT can be saved!
+&introline= Welcome to...
+&introenter= Enter >
+&introskip= Skip Intro >

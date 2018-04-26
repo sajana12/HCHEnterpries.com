@@ -1,0 +1,106 @@
+BODY 	{	COLOR: #FFFFFF;
+		FONT: 12px arial, verdana, sans-serif;
+		scrollbar-base-color: #FFFFFF }
+
+a:link		{ color: #99CCFF; text-decoration: none }
+
+a:visited	{ color: #99CCFF; text-decoration: none }
+
+a:active	{ color: #66FFFF; text-decoration: none }
+
+a:hover		{ color: #66FFFF; text-decoration: none }
+
+.just 		{text-align: justify;}
+
+TABLE 		{ COLOR: #F0F0F0; FONT: 12px arial, verdana, sans-serif; font-weight: bold}
+
+LI 		{ COLOR: #F0F0F0; FONT: 14px arial, verdana, sans-serif; font-weight: normal }
+
+.title 		{ color: #FFFFFF; font: 25px arial; letter-spacing: 0px; font-weight: bold }
+
+.careers 	{ COLOR: #C0C0C0; FONT: 12px arial, verdana, sans-serif; font-weight: bold}
+
+.copytext 	{ COLOR: #F0F0F0; FONT: 10px arial, verdana, sans-serif; font-weight: }
+
+.subtitle 	{ color: #CCFFFF; font: 15px arial, verdana, sans-serif; font-weight: bold}
+
+.phonetitle 	{ color: #FFFFFF; font: 12px verdana, arial, sans-serif; font-weight: bold }
+
+.picturetitle 	{ COLOR: #F0F0F0; FONT: 10px verdana, arial, sans-serif; font-weight: bold }
+
+.picturedesc 	{ COLOR: #FFFFFF; FONT: 10px arial, verdana, sans-serif; font-weight: bold }
+
+
+#menu 		{ RIGHT: 0px; POSITION: absolute; TOP: 0px }
+
+
+
+.button { 	background-image: url("picts/button.gif");
+		background-color:#FFFFFF;
+		FONT-FAMILY: arial, verdana, helvetica, sans;
+		color: #FFFFFF;
+		font-size: 9pt;
+		height: 23px;
+		cursor:hand;
+		font-weight: bold;
+		text-align: center;
+		BORDER: #666666 0px solid }
+
+.buttonon { background-image: url("picts/buttonon.gif");
+		background-color:#333333;
+		FONT-FAMILY: arial, verdana, helvetica, sans;
+		color: #FFFFCE;
+		font-size: 9pt;
+		height: 23px;
+		cursor:hand;
+		font-weight: bold;
+		text-align: center;
+		BORDER: #FFFFFF 0px solid }
+
+.button-popups {background-color:#666666;
+		FONT-FAMILY: arial, verdana, helvetica, sans;
+		color: #FFFFFF;
+		font-size: 8pt;
+		cursor:hand;
+		font-weight: bold;
+		BORDER: #C0C0C0 1px solid }
+
+
+.contact {	background-color:#FFFFFF;
+		FONT-FAMILY: arial, verdana, helvetica, sans;
+		color: #0000FF;
+		font-size: 9pt;
+		height: 23px;
+		cursor:hand;
+		font-weight: normal;
+		text-align: center;
+		BORDER: #FFFFFF 1px solid }
+
+.contacton {	background-color:#333333;
+		FONT-FAMILY: arial, verdana, helvetica, sans;
+		color: #FFFFCE;
+		font-size: 9pt;
+		height: 23px;
+		cursor:hand;
+		font-weight: normal;
+		text-align: center;
+		BORDER: #FFFFFF 1px solid }
+
+
+
+.shadeform	{ FONT: 13px arial, verdana, sans-serif;
+		background-image: url("picts/shadeform.gif");
+		text-align: left;
+		WIDTH: 220PX;
+		BORDER: #FFFFFF 1px solid}
+
+.textarea	{ FONT: 13px arial, verdana, sans-serif;
+		background-image: url("picts/shadeform.gif");
+		text-align: left;
+		WIDTH: 300PX;
+		HEIGHT: 125PX;
+		BORDER: #FFFFFF 1px solid}
+
+.dropdown {	COLOR: #333333;
+		WIDTH: 220PX;
+		FONT: 11px geneva, verdana, arial, sans-serif }
